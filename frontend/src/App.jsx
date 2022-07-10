@@ -7,7 +7,7 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 
 function App () {
-  const [name, setName] = React.useState('')
+  const [username, setUsername] = React.useState('')
 
   React.useEffect(() => {
     (
@@ -18,7 +18,7 @@ function App () {
         })
 
         const content = await response.json()
-        if (content.name !== undefined) setName(content.name)
+        if (content.name !== undefined) setUsername(content.name)
       }
     )()
   })
@@ -26,11 +26,11 @@ function App () {
   return (
     <div className='App'>
       <BrowserRouter>
-        <Nav name={name} setName={setName} />
+        <Nav name={username} resetName={setUsername} />
         <main className='form-signin w-100 m-auto'>
           <Routes>
-            <Route path='/' element={<Home name={name} />} />
-            <Route path='/login' element={<Login setName={setName} />} />
+            <Route path='/' element={<Home name={username} />} />
+            <Route path='/login' element={<Login setUsername={setUsername} />} />
             <Route path='/register' element={<Register />} />
           </Routes>
         </main>

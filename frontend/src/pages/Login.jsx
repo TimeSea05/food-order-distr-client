@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const Login = ({ setName }) => {
+const Login = ({ setUsername }) => {
   const [email, setEmail] = React.useState('')
   const [password, setPassword] = React.useState('')
   const navigate = useNavigate()
@@ -23,7 +23,7 @@ const Login = ({ setName }) => {
     alert(content.message)
 
     if (content.message === 'success') {
-      setName(content.name)
+      setUsername(content.name)
       return navigate('/')
     }
   }
