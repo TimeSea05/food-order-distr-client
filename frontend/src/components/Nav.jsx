@@ -1,20 +1,10 @@
 import React from 'react'
+import logout from '../utilities/logout'
 import { Link } from 'react-router-dom'
 
-const Nav = ({ name, setName }) => {
-  const logout = async () => {
-    const response = await fetch('http://localhost:8000/api/logout', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      credentials: 'include'
-    })
-    const content = await response.json()
-
-    alert(content.message)
-    setName('')
-  }
-
+const Nav = ({ name, resetName }) => {
   let menu
+
   if (name === '') {
     menu = (
       <ul className='navbar-nav me-auto mb-2 mb-md-0'>
@@ -30,7 +20,7 @@ const Nav = ({ name, setName }) => {
     menu = (
       <ul className='navbar-nav me-auto mb-2 mb-md-0'>
         <li className='nav-item'>
-          <Link to='/login' className='nav-link active' onClick={logout}>Logout</Link>
+          <Link to='/login' className='nav-link active' onClick={() => logout(resetName)}>Logout</Link>
         </li>
       </ul>
     )
