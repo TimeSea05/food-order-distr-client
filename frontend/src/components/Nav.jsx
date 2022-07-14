@@ -1,5 +1,6 @@
 import React from 'react'
 import logout from '../utilities/logout'
+import deleteAccount from '../utilities/deleteAccount'
 import { Link } from 'react-router-dom'
 
 const Nav = ({ name, resetName }) => {
@@ -22,6 +23,9 @@ const Nav = ({ name, resetName }) => {
         <li className='nav-item'>
           <Link to='/login' className='nav-link active' onClick={() => logout(resetName)}>Logout</Link>
         </li>
+        <li className='nav-item'>
+          <Link to='/' className='nav-link active' onClick={() => deleteAccount(resetName)}>Delete My Account</Link>
+        </li>
       </ul>
     )
   }
@@ -30,7 +34,7 @@ const Nav = ({ name, resetName }) => {
     <nav className='navbar navbar-expand-md navbar-dark bg-dark mb-4'>
       <div className='container-fluid'>
         <Link to='/' className='navbar-brand'>Home</Link>
-        <div className='collapse navbar-collapse' id='navbarCollapse'>
+        <div className='collapse navbar-collapse'>
           {menu}
         </div>
       </div>
