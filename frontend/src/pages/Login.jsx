@@ -20,9 +20,9 @@ const Login = ({ setUsername }) => {
     })
 
     const content = await response.json()
-    alert(content.message)
+    window.alert(content.message)
 
-    if (content.message === 'success') {
+    if (content.message === 'login successfully') {
       setUsername(content.name)
       return navigate('/')
     }

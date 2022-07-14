@@ -20,7 +20,7 @@ const Register = () => {
       })
     })
 
-    alert('success!')
+    window.alert('register successfully!')
     return navigate('/login')
   }
 

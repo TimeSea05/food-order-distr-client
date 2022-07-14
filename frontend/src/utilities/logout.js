@@ -6,7 +6,7 @@ const logout = async (resetName) => {
   })
   const content = await response.json()
 
-  alert(content.message)
+  window.alert(content.message)
   resetName('')
 }
 
