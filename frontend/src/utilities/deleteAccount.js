@@ -2,6 +2,7 @@ const deleteAccount = async (resetName) => {
   const sureToDelete = window.confirm('Are you sure to delete your account permanently?')
   if (sureToDelete) {
     const response = await fetch('http://localhost:8000/api/delete-account', {
+      method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include'
     })
