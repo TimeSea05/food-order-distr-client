@@ -33,6 +33,14 @@ Then in bash/zsh, run `go run main.go`. The server then will be started.
 
 In the backend, APIs for users to register, login, logout are provided. To use these APIs, you just need to send a POST request to `localhost:8000/api/[function]`:
 
+There are now 5 APIs for developers to use:
+
+* Register: http://localhost:8000/api/register (POST)
+* Login: http://localhost:8000/api/login (POST)
+* User: http://localhost:8000/api/user (GET)
+* Logout: http://localhost:8000/api/logout (POST)
+* DeleteAccount: http://localhost:8000/api/delete-account (POST)
+
 **Example: Login **
 
 ```js
@@ -112,3 +120,5 @@ Response of backend:
    ```
 
    
+
+There is also an API for user to delete their account. This API works only when users have login their accounts. Send a `POST request to `localhost:8000/api/delete-account` can delete the account of current user permanently.
