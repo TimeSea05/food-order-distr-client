@@ -121,4 +121,4 @@ Response of backend:
 
    
 
-There is also an API for user to delete their account. This API works only when users have login their accounts. Send a `POST request to `localhost:8000/api/delete-account` can delete the account of current user permanently.
+There is also an API for user to delete their account. This API works only when users have login their accounts. Send a `POST` request to `localhost:8000/api/delete-account` can delete the account of current user permanently.

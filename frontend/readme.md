@@ -4,23 +4,36 @@
 
 ```bash
 .
+├── components
+│   └── MyNavbar.js
+├── next.config.js
 ├── package-lock.json
 ├── package.json
-├── readme.md
+├── pages
+│   ├── _app.js
+│   ├── api
+│   │   └── hello.js
+│   ├── index.js
+│   ├── login.js
+│   └── register.js
 ├── public
-│   └── index.html
-└── src
-    ├── App.css
-    ├── App.jsx
-    ├── components
-    │   └── Nav.jsx
-    ├── index.css
-    ├── index.js
-    ├── pages
-    │   ├── Home.jsx
-    │   ├── Login.jsx
-    │   └── Register.jsx
-    └── utilities
-        └── logout.js
+│   ├── favicon.ico
+│   └── vercel.svg
+├── readme.md
+├── styles
+│   ├── SignInForm.module.css
+│   └── globals.css
+└── utilities
+    ├── deleteAccount.js
+    └── logout.js
 ```
 
+### 2. How to run the frontend server
+
+First, you need to have `Node.js` and `npm` installed on your PC. Then enter the frontend directory, type
+
+```bash
+npm run dev
+```
+
+to run the server.

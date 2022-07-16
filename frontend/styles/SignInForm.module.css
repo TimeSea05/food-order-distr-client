@@ -1,6 +1,7 @@
 .form-signin {
   max-width: 330px;
   padding: 15px;
+  margin: 25px auto;
 }
 
 .form-signin .form-floating:focus-within {
@@ -8,7 +9,7 @@
 }
 
 .form-signin input[type="email"] {
-  margin-bottom: -1px;
+  margin-bottom: 1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }

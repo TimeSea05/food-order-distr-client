@@ -9,7 +9,7 @@ import (
 var DB *gorm.DB
 
 func Connect() {
-	connection, err := gorm.Open(mysql.Open("root:111111@/mysql"), &gorm.Config{})
+	connection, err := gorm.Open(mysql.Open("root:041578@/mysql"), &gorm.Config{})
 	if err != nil {
 		panic("could not connect to the database")
 	}
