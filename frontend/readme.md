@@ -1,6 +1,6 @@
-## Frontend of Food Distribution System
+# Frontend of Food Distribution System
 
-### 1. File Structure
+## 1. File Structure
 
 ```bash
 .
@@ -28,7 +28,7 @@
     └── logout.js
 ```
 
-### 2. How to run the frontend server
+## 2. How to run the frontend server
 
 First, you need to have `Node.js` and `npm` installed on your PC. Then enter the frontend directory, type
 

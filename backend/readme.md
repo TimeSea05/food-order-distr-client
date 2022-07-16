@@ -1,6 +1,6 @@
-## Backend of Food Distribution System
+# Backend of Food Distribution System
 
-### 1. File Structure
+## 1. File Structure
 
 ```bash
 .
@@ -18,7 +18,7 @@
 └── readme.md
 ```
 
-### 2. How to run the backend server
+## 2. How to run the backend server
 
 First you need to connect to mysql server. The following is default settings of mysql server, you can change them in `backend/database/connection.go`:
 
