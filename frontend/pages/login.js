@@ -35,7 +35,6 @@ const Login = () => {
     }
   }
 
-
   return (
     <div>
       <Head><title>Login</title></Head>

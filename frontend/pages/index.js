@@ -1,9 +1,10 @@
 import React from 'react'
+import Head from 'next/head'
 import { UsernameContext } from './_app'
 import MyNavbar from '../components/MyNavbar'
-import Head from 'next/head'
+import UserInfotable from '../components/UserInfoTable/UserInfoTable'
 
-export default function Home() {
+export default function Home () {
   const { username } = React.useContext(UsernameContext)
 
   return (
@@ -11,9 +12,9 @@ export default function Home() {
       <MyNavbar />
       <Head><title>Home</title></Head>
       <main>
-        <h1 style={{ margin: '100px' }}>
-          {username ? 'Hi, ' + username : 'You are not authenticated'}
-        </h1>
+        <div style={{ margin: '50px 50px' }}>
+          {username ? <UserInfotable /> : 'You are not authenticated'}
+        </div>
       </main>
     </div>
   )
