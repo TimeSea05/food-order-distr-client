@@ -4,8 +4,10 @@ import 'rsuite/dist/rsuite.min.css'
 import '../styles/globals.css'
 
 export const UsernameContext = React.createContext()
-function MyApp({ Component, pageProps }) {
+function MyApp ({ Component, pageProps }) {
+  const [userID, setUserID] = React.useState('')
   const [username, setUsername] = React.useState('')
+  const [email, setEmail] = React.useState('')
 
   React.useEffect(() => {
     (
@@ -16,13 +18,17 @@ function MyApp({ Component, pageProps }) {
         })
 
         const content = await response.json()
-        if (content.name !== undefined) setUsername(content.name)
+        if (content.name !== undefined) {
+          setUserID(content.id)
+          setUsername(content.name)
+          setEmail(content.email)
+        }
       }
     )()
   })
 
   return (
-    <UsernameContext.Provider value={{username, setUsername}}>
+    <UsernameContext.Provider value={{ userID, username, setUsername, email }}>
       <Component {...pageProps} />
     </UsernameContext.Provider>
   )
